@@ -1,0 +1,1 @@
+This repository documents my 60-day Python programming journey, where I will be exploring various concepts, built projects to help enhance my understanding of Python.
