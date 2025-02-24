@@ -1,3 +1,8 @@
+# User rolls the dice and has two options yes or  no. This can be in either upper case or lower case.
+# If user selects yes it displayed number between 1 and 6, if no it displayed "Thanks for playing"
+# And if any other option is selected outside any of these two user gets "Invalid option"
+
+
 import random
 
 while True:
