@@ -4,6 +4,17 @@ import random
 emojis = {'r': '🪨', 'p': '📄', 's': '✂️'} # Using dict to map emoji to each character
 choices = ('r', 'p', 's')
 
+def determine_winner(user_choice, computer_choice):
+    """Determines the winner based on choices."""
+    if user_choice == computer_choice:
+        return 'Tie'
+    elif (
+        (user_choice == 'r' and computer_choice == 's') or 
+        (user_choice == 's' and computer_choice == 'p') or 
+        (user_choice == 'p' and computer_choice == 'r')):
+        return 'You win'
+    return 'You lose'
+
 while True:
     user_choice = input('Rock, Paper or Scissors? (r,p,s): ').lower()
     
@@ -16,15 +27,7 @@ while True:
     print(f'You chose {emojis[user_choice]}')
     print(f'Computer chose {emojis[computer_choice]}')
 
-    if user_choice == computer_choice:
-        print('Tie')
-    elif (
-        (user_choice == 'r' and computer_choice == 's') or 
-        (user_choice == 's' and computer_choice == 'p') or
-        (user_choice == 'p' and computer_choice == 'r')):
-        print('You win')
-    else:
-        print('You lose')
+    print(determine_winner(user_choice, computer_choice))
 
     proceed = input('Continue? (y/n): ').lower()
     if proceed == 'n':
